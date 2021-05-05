@@ -8,7 +8,7 @@
         $req->execute($e);
         $free = $req->rowCount($sql);
 
-        return $free;
+        return $free;   
     }
 
     function register($name, $email, $password){
