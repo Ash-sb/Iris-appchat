@@ -70,7 +70,7 @@ body{
     width:100%;
     line-height: 100px;
     padding:0 5%;
-    top:0px;
+    margin: 1% auto;
     color: #FFF;
 }
 
@@ -81,10 +81,22 @@ body{
     font-size: 50px;
 }
 
+.topbar .app-name:hover {
+    color: #27a1b1;
+}
+
 .topbar .menu{
     display: flex;
-    margin-right: 4%;
 }
+
+.menu svg {
+    fill: #44CCDD;
+}
+
+.menu svg:hover {
+    fill: #27a1b1;
+}
+
 
 button {
     border-radius: 50px;
