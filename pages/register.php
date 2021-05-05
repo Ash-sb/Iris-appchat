@@ -18,6 +18,45 @@
             $_SESSION['tchat'] = $email;
             header("Location:index.php?page=membres");
         }
+
+        //vérif mot de passe
+    if (preg_match('/[a-z]/', $password)) { 
+        if (preg_match('/[A-Z]/', $password)) {
+            if (preg_match('/[0-9]/', $password)) {
+                if (preg_match('/[%!?*]/', $password)) {
+                    if (iconv_strlen($password) < 10 || iconv_strlen($password) > 20) {
+                        $content .= "Veuillez saisir un mot de passe entre 10 et 20 caractères.<br>";
+                    }
+                } else {
+                    $content .= "Veuillez saisir un mot de passe avec un caractère spécial [%!?*].<br>";
+                }
+            } else {
+                $content .= "Veuillez saisir un mot de passe avec un chiffre.<br>";
+            }
+        } else {
+            $content .= "Veuillez saisir un mot de passe avec une lettre majuscule.<br>";
+        }
+    } else {
+        $content .= "Veuillez saisir un mot de passe avec une lettre minuscule.<br>";
+    }
+    
+
+    // L'inscription a fonctionné si aucun message d'erreur est affiché
+    if (empty($content)){ 
+        $content .= "Vous êtes inscrit !";
+        $mdpCrypt = password_hash($password, PASSWORD_DEFAULT);
+
+        //Mettre les données du formulaire dans la base de données.
+        $queryInsert = "INSERT INTO user (name_user,email_user,password_user) VALUES (?,?,?)";
+        $inscription = $pdo->prepare($queryInsert);
+        $inscription->execute(
+            [
+                $name,
+                $email,
+                $passwordCrypt
+            ]
+        );
+    }
     }
 
 ?>
