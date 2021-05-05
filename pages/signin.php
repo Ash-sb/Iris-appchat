@@ -4,7 +4,6 @@
     }
 ?>
 
-<h2 class="header">Rejoignez Iris aujourd'hui !</h2>
 
 <?php
 
@@ -25,6 +24,7 @@
 ?>
 
 <form method="post" id="logForm">
+<h2 class="header">Rejoignez Iris aujourd'hui !</h2>
 
     <div class="field">
         <label class="field-label" for="email">Votre adresse email</label>

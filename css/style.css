@@ -51,6 +51,7 @@ body{
 
     margin: 0;
     padding: 0;
+    background-color: #F6FEFF;
 }
 
 .container{
@@ -147,6 +148,10 @@ main {
     color: #878787;
 }
 
+form {
+    width: 50%;
+    margin: auto;
+}
 
 .field{
     position: relative;
@@ -203,7 +208,7 @@ main {
 }
 
 .field::after{
-    background-color: #2195F2;
+    background-color: #44CCDD;
     transform: scaleX(0);
     transition: transform 0.3s;
 }
@@ -213,7 +218,7 @@ main {
 }
 
 .is-focused .field-label{
-    color: #2195F2;
+    color: #44CCDD;
 }
 .field.is-focused::after{
     transform: scaleX(1);
@@ -232,7 +237,9 @@ main {
 
 .header{
     display: block;
-    border-bottom: 2px solid #000;
+    margin: auto;
+    border-bottom: solid 2px #FFF2B2;
+    margin-bottom: 20px;
 }
 
 .header.header-form{
@@ -245,20 +252,26 @@ p.error{
 
 .membre{
     display:block;
-    background-color:#ccc;
+    background-color:#FFF;
+    margin: auto;
+    width: 50%;
     padding:10px 10px;
     margin-bottom:10px;
-    box-shadow:1px 2px 5px 1px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    border-radius: 10px;
+    border: solid 1px #FFF2B2;
+    box-shadow: 0px 4px 10px 10px rgba(225, 222, 222, 0.25);
+  -moz-box-shadow: 0px 4px 10px 10px rgba(225, 222, 222, 0.25);
+  -webkit-box-shadow: 0px 4px 10px 10px rgba(225, 222, 222, 0.25);
     position:relative;
-    border-radius:2px;
 }
 
 .membre .select{
     position:absolute;
     right: 10px;
     top: 9px;
-    background-color:#3498db;
-    color:#fff;
+    background-color:#E3F9FC;
+    color:#44CCDD;
     display:block;
     width:40px;
     height:40px;
@@ -272,16 +285,14 @@ p.error{
 }
 
 .bottom{
-    position:fixed;
     background-color:#fff;
     bottom:0px;
     width:96%;
 }
 
 .bottom .send{
-    background-color:#34495E;
-    color:#fff;
-    position:absolute;
+    background-color:#E3F9FC;
+    color:#44CCDD;
     right:0px;
     top:25px;
     width:38px;
@@ -296,10 +307,28 @@ p.error{
 
 }
 
-.maessages-box{
+.messages-box{
     position:relative;
     background-color:#fff;
-    margin-bottom:95px;
+    height: 70vh;
+    overflow-y: auto;
+
+}
+
+/*.messages-box::-webkit-scrollbar {
+    width: 0px;
+} */
+
+.app {
+    background-color:#fff;
+    margin: auto;
+    padding: 35px;
+    width: 50%;
+    border-radius: 40px;
+    border: solid 1px c;
+    box-shadow: 0px 4px 10px 10px rgba(225, 222, 222, 0.25);
+  -moz-box-shadow: 0px 4px 10px 10px rgba(225, 222, 222, 0.25);
+  -webkit-box-shadow: 0px 4px 10px 10px rgba(225, 222, 222, 0.25);
 }
 
 .messages-box .message{
@@ -312,10 +341,10 @@ p.error{
 }
 
 .messages-box .message.message-membre{
-    background-color:#3498db;
+    background-color:#E3F9FC;
     float:right;
 }
 
 .messages-box .message.message-user{
-    background-color:#bdc3c7;
+    background-color:#FFF2B2;
 }

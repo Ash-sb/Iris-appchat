@@ -4,7 +4,6 @@
     }
 ?>
 
-<h2 class="header header-form">S'inscrire</h2>
 
 <?php
     if(isset($_POST['submit'])){
@@ -63,7 +62,7 @@
 ?>
 
 <form method="post" id="regForm">
-
+<h2 class="header header-form">S'inscrire</h2>
     <div class="field">
         <label class="field-label" for="name">Votre nom</label>
         <input class="field-input" type="text" name="name" id="name"/>
