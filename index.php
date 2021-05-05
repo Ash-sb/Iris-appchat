@@ -22,7 +22,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Application web de tchat</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iris - Application web de tchat</title>
         <link rel="stylesheet" href="css/style.css"/>
         <link href='http://fonts.googleapis.com/css?family=Roboto:500,700,400' rel='stylesheet' type='text/css'>
     </head>

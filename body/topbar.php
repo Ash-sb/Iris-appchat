@@ -1,5 +1,5 @@
 <div class="topbar">
-    <a class="app-name" href="index.php">Tchat</a>
+    <a class="app-name" href="index.php">Iris</a>
     <span class="menu">
         <?php
             if(isLogged() == 1){
@@ -9,8 +9,9 @@
                 <?php
             }else{
                 ?>
-                    <a href="index.php?page=register" class="<?php echo ($page=='register') ? 'active' : '' ?>">S'inscrire</a>
-                    <a href="index.php?page=signin" class="<?php echo ($page=='signin') ? 'active' : '' ?>">Se connecter</a>
+                    <button id="btn-connexion"><a href="index.php?page=signin" class="<?php echo ($page=='signin') ? 'active' : '' ?>">Connexion</a></button>
+                    <button id="btn-inscription"><a href="index.php?page=register" class="<?php echo ($page=='register') ? 'active' : '' ?>">Inscription</a></button>
+                    
                 <?php
             }
         ?>
