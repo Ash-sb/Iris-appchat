@@ -21,35 +21,7 @@
 
 
     }
-
-?>
-
-<?php
-//vérif mot de passe
-    if (preg_match('/[a-z]/', $mdp)) { 
-        if (preg_match('/[A-Z]/', $mdp)) {
-            if (preg_match('/[0-9]/', $mdp)) {
-                if (preg_match('/[%!?*]/', $mdp)) {
-                    if (iconv_strlen($mdp) < 10 || iconv_strlen($mdp) > 20) {
-                        $content .= "Veuillez saisir un mot de passe entre 10 et 20 caractères.<br>";
-                    }
-                } else {
-                    $content .= "Veuillez saisir un mot de passe avec un caractère spécial [%!?*].<br>";
-                }
-            } else {
-                $content .= "Veuillez saisir un mot de passe avec un chiffre.<br>";
-            }
-        } else {
-            $content .= "Veuillez saisir un mot de passe avec une lettre majuscule.<br>";
-        }
-    } else {
-        $content .= "Veuillez saisir un mot de passe avec une lettre minuscule.<br>";
-    }
     
-    if (!preg_match('/'.$confirmdp.'/',$mdp)){
-        $content .= "Les mots de passe ne correspondent pas.<br>";
-    }
-
 ?>
 
 <form method="post" id="logForm">
