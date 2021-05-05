@@ -8,7 +8,8 @@
 
     foreach(get_user() as $user){
         ?>
-            <h2 class="header"><?= $user->name; ?></h2>
+        <div class="app">
+            <h2 class="header">Votre discussion avec <?= $user->name; ?></h2>
 
             <div class="messages-box"></div>
 
@@ -21,6 +22,7 @@
                     <span class="i-send"></span>
                 </button>
 
+            </div>
             </div>
         <?php
     }
