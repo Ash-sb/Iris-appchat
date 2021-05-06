@@ -7,7 +7,7 @@
 
 <?php
     if(isset($_POST['submit'])){
-
+        $content = "";
         extract($_POST);
 
         if (email_taken($email) == 1){
