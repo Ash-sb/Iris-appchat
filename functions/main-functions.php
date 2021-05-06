@@ -11,6 +11,7 @@
         die("Une erreur est survenue lors de la connexion a la base de donnees");
     }
 
+    $content = '';
 
     function isLogged(){
         if(isset($_SESSION['tchat'])){
