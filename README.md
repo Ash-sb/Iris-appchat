@@ -4,8 +4,9 @@ L'application Iris permet à des utilisateurs de discuter via messages sur un ch
 
 Nous avons utilisé : 
 - CSS pour le style UX-UI
+- HTML pour la structure
 - SQL : pour le lien avec la base de données
-- PHP et Javascript: pour les fonctions, la structure, pour les interactions
+- PHP et Javascript: pour les fonctions et les interactions
 - Ajax : pour des interactions
 
 
