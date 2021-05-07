@@ -32,6 +32,7 @@
         } 
         
         if (empty($content)) {
+            $password = sha1(htmlspecialchars(trim($_POST['password'])));
             register($name, $email, $password);
             $_SESSION['tchat'] = $email;
             header("Location:index.php?page=membres");

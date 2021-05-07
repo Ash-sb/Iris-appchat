@@ -8,7 +8,9 @@
 <?php
 
     if(isset($_POST['submit'])){
-        extract($_POST);
+
+        $email = htmlspecialchars(trim($_POST['email']));
+        $password = sha1(htmlspecialchars(trim($_POST['password'])));
 
         if(user_exist($email,$password) == 1){
             $_SESSION['tchat'] = $email;
