@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,7 +8,7 @@
             <input placeholder="Enter username..."
                     type="text"
                     id="username-input" /><br>
-            <button onclick="StartCall()">Lancer un appel</button>
+            <button onclick="JoinCall()">Rejoindre un appel</button>
         </div>
         <div id="video-call-div">
             <video muted id="local-video" autoplay></video>
@@ -19,7 +18,7 @@
             <button class="circle-button command" onclick="muteVideo()"><i class="fas fa-video-slash"></i></button>
             </div>
         </div>
-        <script src="js/video.func.js"></script>
+        <script src="js/video-receiver.func.js"></script>
     </body>
 
 </html>

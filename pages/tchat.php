@@ -25,7 +25,12 @@
                     <a href="index.php?page=video">
                         <span class="icon fas fa-video"></span>
                     </a>
-                </button>            
+                </button>  
+                <button class="circle-button">
+                    <a href="index.php?page=video-receiver">
+                        <span class="icon fas fa-phone-volume"></span>
+                    </a>
+                </button>          
             </div>
             </div>
             

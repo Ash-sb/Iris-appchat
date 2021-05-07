@@ -15,13 +15,13 @@ function handleSignallingData(data) {
     }
 }
 
-function createAndSendOffer () {
-    peerConn.createOffer((offer) => {
+function createAndSendAnswer () {
+    peerConn.createAnswer((answer) => {
+        peerConn.setLocalDescription(answer)
         sendData({
-            type: "store_offer",
-            offer: offer
+            type: "send_answer",
+            answer: answer
         })
-        peerConn.setLocalDescription(offer)
     }, error => {
         console.log(error)
     })
@@ -37,7 +37,7 @@ let localStream
 let peerConn
 let username
 
-function StartCall() {
+function JoinCall() {
 
     username = document.getElementById("username-input").value
 
@@ -80,13 +80,15 @@ function StartCall() {
                 return
             
             sendData({
-                type: "store_candidate",
+                type: "send_candidate",
                 candidate: e.candidate
             })
         })
 
-        
-        createAndSendOffer()
+        sendData({
+            type: "join_call"
+        })
+
     }, (error) => {
         console.log(error)
     })
