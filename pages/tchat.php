@@ -21,18 +21,11 @@
                 <button type="submit" id="send" class="circle-button">
                     <span class="i-send"></span>
                 </button>
-                <button  onclick="sendUsername(), startCall();" class="circle-button">
+                <button class="circle-button"><a href="index.php?page=video"></a></button>
                     <span class="fas fa-video"></span>
                 </button>
             </div>
             </div>
-            <div id="video-call-div">
-                <video id="local-video" autoplay></video>
-                <video id="remote-video" autoplay></video>
-                <div class="call-action-div">
-                    <button class="circle-button command" onclick="muteVideo()"><i class="fas fa-volume-mute"></i></button>
-                    <button class="circle-button command" onclick><i class="fas fa-video-slash"></i></button>
-                </div>
-            </div>
+            
         <?php
     }
