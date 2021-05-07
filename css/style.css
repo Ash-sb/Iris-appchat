@@ -384,3 +384,7 @@ height: 300px;
 button {
     cursor: pointer;
 }
+
+#username-input {
+    display: none;
+}

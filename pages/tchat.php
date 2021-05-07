@@ -21,9 +21,11 @@
                 <button type="submit" id="send" class="circle-button">
                     <span class="i-send"></span>
                 </button>
-                <button class="circle-button"><a href="index.php?page=video"></a></button>
-                    <span class="fas fa-video"></span>
-                </button>
+                <button class="circle-button">
+                    <a href="index.php?page=video">
+                        <span class="icon fas fa-video"></span>
+                    </a>
+                </button>            
             </div>
             </div>
             
